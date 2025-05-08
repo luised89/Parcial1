@@ -27,45 +27,57 @@ public class Registro {
         
         System.out.print("Ingrese su opcion: ");
         int opcion = scanner.nextInt();
+        scanner.nextLine();
+        
         
         if (opcion == 1) {
                 
                     System.out.print("Ingrese el Nombre del libro: ");
-                    String X1 = scanner.nextLine();
-                    System.out.println(X1);
+                    String nomlib = scanner.nextLine();
+                    
+                    System.out.println("Nombre ingresado " + nomlib);
+                    System.out.println("----------------- ");
                    
-                   
-                   // System.out.print("Ingrese el año de publicacion: ");
-                    //int X2 = scanner.nextInt();
-
-                   // System.out.print("Seleccione entre las siguientes opciones segun corresponda el Genero: ");
-                   // System.out.println("1. ciencia");
-                    //System.out.println("2. literatura");
-                  //  System.out.println("3. ingenieria");
-                   // int opcion2 = scanner.nextInt();
-                  //  if(opcion2 == 1){
-                  //      String X3 = "ciencia";
-                   // }
-                  //  if(opcion2 == 2){
-                  //      String X3 = "literatura";
-                  //  }
-                  //  if(opcion2 == 3){
-                  //      String X3 = "ingenieria";
-                  //  }                
-        
+                    System.out.print("Ingrese el año de publicacion: ");
+                    int apublicacion = scanner.nextInt();
+                    
+                    System.out.println("Se publico en " + apublicacion);
+                    System.out.println("----------------- ");
+                    
+                    System.out.println("Seleccione entre las siguientes opciones segun corresponda el Genero: ");
+                    System.out.println("1. ciencia");
+                    System.out.println("2. literatura");
+                    System.out.println("3. ingenieria");
+                    int opcion2 = scanner.nextInt();
+                    
+                    String gen = "";
+                switch(opcion2) {
+                    case 1:
+                        gen = "ciencia";
+                        break;
+                    case 2:
+                        gen = "literatura";
+                        break;
+                    case 3:
+                        gen = "ingenieria";
+                        break;
+                    default:
+                        gen = "desconocido";
+            }       
+                   Libro nuevoLibro = new Libro(nomlib, apublicacion,gen);
         }
 
 
 
         if(opcion == 2){
-                    System.out.print("Ingrese el valor a retirar: ");
+                    System.out.print("Profesor ");
                     //double valorRetirar = scanner.nextDouble();
                     //cuenta.retirar(valorRetirar);
         }
         
         
         if(opcion == 3){
-                    System.out.println("Gracias por usar nuestros servicios.");
+                    System.out.println("Estudiante");
                     scanner.close();
         }
                         
