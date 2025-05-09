@@ -8,16 +8,21 @@ package registro;
  *
  * @author Estudiante
  */
+import java.util.ArrayList;
+
 public class Estudiante {
     
     private String NombreE;
     private int CodigoE;
     private String Carrera;
     
+    private static ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
+    
     public Estudiante(String ne, int cde, String car) {
         this.NombreE = ne;
         this.CodigoE = cde;
         this.Carrera = car;
+        listaEstudiantes.add(this);
     }    
     
 }
