@@ -8,16 +8,22 @@ package registro;
  *
  * @author Estudiante
  */
+import java.util.ArrayList;
+
+
 public class Profesor {
     
     private String NombreP;
     private int CodigoP;
     private String Facultad;
     
+    private static ArrayList<Profesor> listaProfesores = new ArrayList<>();
+    
     public Profesor(String np, int cdp, String fac) {
         this.NombreP = np;
         this.CodigoP = cdp;
         this.Facultad = fac;
+        listaProfesores.add(this);
     }
     
 }
